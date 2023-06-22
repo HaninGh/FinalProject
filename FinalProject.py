@@ -26,6 +26,19 @@ print(course)
 
 class Student:
     # TODO 3 define static variable indicates total student count
+    class Student:
+        # define static variable indicates total student count
+        total_student_count = 0
+        def __init__(self, name, student_id):
+            self.name = name
+            self.student_id = student_id
+            Student.total_student_count += 1
+        def __repr__(self):
+            return f"Student(name='{self.name}', student_id={self.student_id})"
+
+student1 = Student("Hanin Gh", 12345)
+student2 = Student("Hamza Gh", 67890)
+print(Student.total_student_count)
 
     # TODO 4 define a constructor which includes
     # student_id (unique using uuid module)
