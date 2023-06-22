@@ -173,11 +173,13 @@ while True:
     else:
         print("Please enter a valid selection.")
 
-    if selection == 1:
+        # TODO 10 make sure that Student number is not exists before
 
+    if selection == 1:
+    
         # TODO 10 make sure that Student number is not exists before
         student_number = input("Enter Student Number")
-
+    
         student_name = input("Enter Student Name")
         while True:
             try:
@@ -185,6 +187,18 @@ while True:
                 break
             except:
                 print("Invalid Value")
+    
+def add_student(student_number, student_name, student_age):
+
+    for student in students:
+
+        if student.student_number == student_number:
+            print("Student number already exists.")
+            return
+
+    student = Student(student_name, student_age, student_number)
+    students.append(student)
+
 
         # TODO 11 create student object and append it to students list
 
