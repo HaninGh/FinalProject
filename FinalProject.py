@@ -1,7 +1,7 @@
 """ITF 07 Final Project Attendance System
 # TODO 1 Enter your name and submission date
-Name : 
-Delivery Date :
+Name : Hanin Kamal Ghannam
+Delivery Date : 22-06-2023
 """
 
 
