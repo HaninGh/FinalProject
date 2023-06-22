@@ -127,17 +127,9 @@ def get_student_average(self):
 
         return student_average
 
-
-
-
-
-
-
-
-
-
 # in Global Scope
 # TODO 8 declare empty students list
+students = []
 
 while True:
 
