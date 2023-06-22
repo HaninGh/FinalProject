@@ -57,16 +57,45 @@ def __repr__(self):
     student = Student(student_name, student_age, student_number, courses_list)
     print(student)
 
-    # TODO 5 define a method to enroll new course to student courses list
+# TODO 5 define a method to enroll new course to student courses list
+def enroll_new_course(self, course):
+    """
+    Enrolls a new course to the student's courses list.
 
-    # method to get_student_details as dict
-    def get_student_details(self):
-        return self.__dict__
+    Args:
+        course (Course): The course to enroll.
 
-    # method to get_student_courses
-    def get_student_courses(self):
-        # TODO 6 print student courses with their marks
-        pass
+    Returns:  
+        None.
+    """
+    
+    self.courses_list.append(course)
+def get_student_details(self):
+     """
+     Returns the student details as a dictionary.
+
+     Returns:
+         dict: The student details.
+     """
+
+     return self.__dict__
+def get_student_courses(self):
+    """
+    Returns the student's courses list.
+
+    Returns:
+        list: The student's courses list.
+    """
+
+    return self.courses_list
+
+
+
+
+
+
+# TODO 6 print student courses with their marks
+ pass
 
     # method to get student_average as a value
     def get_student_average(self):
