@@ -10,6 +10,19 @@ Delivery Date : 22-06-2023
 # course name (user_input) and
 # course mark (user_input)
 
+import uuid
+class Course:
+
+    def __init__(self, course_name, course_mark):
+        self.course_id = uuid.uuid4()
+        self.course_name = course_name
+        self.course_mark = course_mark
+
+    def __repr__(self):
+        return f"Course(course_id={self.course_id}, course_name='{self.course_name}', course_mark={self.course_mark})"
+
+course = Course("Python Programming", 100)
+print(course)
 
 class Student:
     # TODO 3 define static variable indicates total student count
