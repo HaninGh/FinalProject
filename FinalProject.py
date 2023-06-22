@@ -271,9 +271,46 @@ student_number = "123456789"
 get_student_average(student_number)
 
 
-    elif selection == 5:
-        student_number = input("Enter Student Number")
-        # TODO 15 ask user to enter course name and course mark then create coures object then append it to target student courses
+ # TODO 15 ask user to enter course name and course mark then create coures object then append it to target student courses
+def add_course_to_student(student_number):
+
+    found = False
+    for student in students:
+        if student.student_number == student_number:
+            found = True
+            course_name = input("Enter Course Name")
+            course_mark = int(input("Enter Course Mark"))
+            course = Course(course_name, course_mark)
+            student.courses.append(course)
+            print("Course Added Successfully")
+            break
+
+    if not found:
+        print("Student Not Found")
+
+
+if selection == 5:
+    student_number = input("Enter Student Number")
+    add_course_to_student(student_number)
+
+student_number = "123456789"
+add_course_to_student(student_number)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     else:
         # TODO 16 call a function to exit the program
