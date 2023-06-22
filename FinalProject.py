@@ -247,9 +247,29 @@ if selection == 3:
 student_number = "123456789"
 find_student(student_number)
 
-    elif selection == 4:
-        student_number = input("Enter Student Number")
-        # TODO 14 find the target student using loops and get student average  if exist , if not print ("Student Not Exist")
+
+# TODO 14 find the target student using loops and get student average  if exist , if not print ("Student Not Exist")
+def get_student_average(student_number):
+
+    found = False
+    for student in students:
+        if student.student_number == student_number:
+            found = True
+            average = sum(student.grades) / len(student.grades)
+            print("Student Average:", average)
+            break
+
+    if not found:
+        print("Student Not Found")
+
+
+if selection == 4:
+    student_number = input("Enter Student Number")
+    get_student_average(student_number)
+
+student_number = "123456789"
+get_student_average(student_number)
+
 
     elif selection == 5:
         student_number = input("Enter Student Number")
