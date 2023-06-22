@@ -206,10 +206,22 @@ def add_student(student_number, student_name, student_age):
     print("Student Added Successfully")
 
 
+    # TODO 12 find the target student using loops and delete it if exist , if not print ("Student Not Exist")
+    def delete_student(student_number):
 
-    elif selection == 2:
-        student_number = input("Enter Student Number")
-        # TODO 12 find the target student using loops and delete it if exist , if not print ("Student Not Exist")
+        found = False
+        for student in students:
+            if student.student_number == student_number:
+                found = True
+                students.remove(student)
+                print("Student Deleted Successfully")
+                break
+
+        if not found:
+            print("Student Not Found")
+
+
+
 
     elif selection == 3:
         student_number = input("Enter Student Number")
