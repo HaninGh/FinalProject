@@ -24,10 +24,9 @@ class Course:
 course = Course("Python Programming", 100)
 print(course)
 
-class Student:
-    # TODO 3 define static variable indicates total student count
-    class Student:
-        # define static variable indicates total student count
+ #TODO 3 define static variable indicates total student count
+class Student :
+        #define static variable indicates total student count
         total_student_count = 0
         def __init__(self, name, student_id):
             self.name = name
@@ -40,14 +39,23 @@ student1 = Student("Hanin Gh", 12345)
 student2 = Student("Hamza Gh", 67890)
 print(Student.total_student_count)
 
-    # TODO 4 define a constructor which includes
-    # student_id (unique using uuid module)
-    # student_name (user input)
-    # student_age (user input)
-    # student_number (user_input)
-    # courses_list (List of Course Objects)
-    def __init__(self):
-        pass
+#TODO 4 define a constructor which includes
+def __init__(self, student_name, student_age, student_number, courses_list):
+    self.student_id = uuid.uuid4()
+    self.student_name = student_name
+    self.student_age = student_age
+    self.student_number = student_number
+    self.courses_list = courses_list
+    Student.total_student_count += 1
+def __repr__(self):
+    return f"Student(student_id={self.student_id}, student_name='{self.student_name}', student_age={self.student_age}, student_number={self.student_number}, courses_list={self.courses_list})"
+    student_name = input("Enter the student name: ")
+    student_age = int(input("Enter the student age: "))
+    student_number = input("Enter the student number: ")
+    courses_list = [Course("Python Programming", 100), Course("Data Structures", 75)]
+
+    student = Student(student_name, student_age, student_number, courses_list)
+    print(student)
 
     # TODO 5 define a method to enroll new course to student courses list
 
