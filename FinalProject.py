@@ -219,13 +219,33 @@ def add_student(student_number, student_name, student_age):
 
         if not found:
             print("Student Not Found")
+student_number = "123456789"
+
+delete_student(student_number)
 
 
 
-
-    elif selection == 3:
-        student_number = input("Enter Student Number")
         # TODO 13 find the target student using loops and print student detials  if exist , if not print ("Student Not Exist")
+def find_student(student_number):
+   
+             found = False
+             for student in students:
+                 if student.student_number == student_number:
+                     found = True
+                     print("Student Name:", student.student_name)
+                     print("Student Age:", student.student_age)
+                     break
+         
+             if not found:
+                 print("Student Not Found")
+         
+         
+if selection == 3:
+             student_number = input("Enter Student Number")
+             find_student(student_number)
+
+student_number = "123456789"
+find_student(student_number)
 
     elif selection == 4:
         student_number = input("Enter Student Number")
