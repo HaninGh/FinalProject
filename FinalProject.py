@@ -140,6 +140,38 @@ while True:
                           "4.Get Student Average\n"
                           "5.Add Course to student with mark.\n"
                           "6.Exit"))
+while True:
+
+    try:
+        selection = int(input("1.Add New Student\n"
+                          "2.Delete Student\n"
+                          "3.Display Student\n"
+                          "4.Get Student Average\n"
+                          "5.Add Course to student with mark.\n"
+                          "6.Exit"))
+    except ValueError:
+        print("Please enter a valid selection.")
+        continue
+
+    if selection == 1:
+        # code to add a new student
+        break
+    elif selection == 2:
+        # code to delete a student
+        break
+    elif selection == 3:
+        # code to display a student
+        break
+    elif selection == 4:
+        # code to get a student's average
+        break
+    elif selection == 5:
+        # code to add a course to a student
+        break
+    elif selection == 6:
+        break
+    else:
+        print("Please enter a valid selection.")
 
     if selection == 1:
 
