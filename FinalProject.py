@@ -296,22 +296,14 @@ if selection == 5:
 student_number = "123456789"
 add_course_to_student(student_number)
 
+# TODO 16 call a function to exit the program
+def exit_program():
+    print("Exiting Program...")
+    exit()
 
 
+if selection == 6:
+    exit_program()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    else:
-        # TODO 16 call a function to exit the program
-        pass
+selection = 6
+exit_program()
