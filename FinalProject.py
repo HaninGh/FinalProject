@@ -89,18 +89,46 @@ def get_student_courses(self):
 
     return self.courses_list
 
+#TODO 6 print student courses with their marks
+def print_student_courses_with_marks(self):
+    """
+    Prints the student's courses with their marks.
+
+    Returns:
+        None.
+    """
+
+    print("Course name: Mark")
+    for course in self.courses_list:
+        if course is not None:
+            print(f"{course.course_name}: {course.course_mark}")
+
+    if len(self.courses_list) == 0:
+        print("No courses enrolled yet.")
+
+# method to get student_average as a value
+def get_student_average(self):
+#TODO 7 return the student average
+def get_student_average(self):
+    """
+    Gets the student's average mark.
+
+    Returns:
+        float: The student's average mark.
+    """
+
+    total_marks = 0
+    number_of_courses = len(self.courses_list)
+
+    for course in self.courses_list:
+        if course is not None:
+            total_marks += course.course_mark
+
+    student_average = total_marks / number_of_courses
+
+    return student_average
 
 
-
-
-
-# TODO 6 print student courses with their marks
- pass
-
-    # method to get student_average as a value
-    def get_student_average(self):
-        # TODO 7 return the student average
-        pass
 
 
 # in Global Scope
