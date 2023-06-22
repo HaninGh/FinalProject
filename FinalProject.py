@@ -200,9 +200,12 @@ def add_student(student_number, student_name, student_age):
     students.append(student)
 
 
-        # TODO 11 create student object and append it to students list
+    # TODO 11 create student object and append it to students list
+    std1 = Student(student_name, student_age, student_number, [])
+    students.append(std1)
+    print("Student Added Successfully")
 
-        print("Student Added Successfully")
+
 
     elif selection == 2:
         student_number = input("Enter Student Number")
